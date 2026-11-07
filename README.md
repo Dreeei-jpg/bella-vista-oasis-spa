@@ -1,9 +1,7 @@
 # Bella Vista Oasis Spa — Phase 5.3
-This fresh source copy excludes private configuration, database exports, runtime data, old archives, and historical screenshots. Screenshots referenced by older reports are retained only in the private local backup. Database SQL files contain installation structure and nonpersonal setup data; real accounts and bookings remain in MySQL.
-
 Working PHP/MySQL college-project prototype with Quiet Atlas branding, customer registration/login, health declarations, real availability, simulated checkout, appointment history, cancellation/rescheduling, and integrated administration.
 
-**Test checkout — No actual funds will be transferred.** GCash, Maya and Card are available as test payment options. Checkout collects no payment credentials. Payment History identifies test transactions separately from verified provider records.
+Test checkout — No actual funds will be transferred. GCash, Maya and Card are available as test payment options. Checkout collects no payment credentials. Payment History identifies test transactions separately from verified provider records.
 
 ## Open the current installation
 
