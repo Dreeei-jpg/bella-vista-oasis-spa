@@ -1,0 +1,182 @@
+:root {
+  color-scheme: light;
+  --surface: #f6f2e9;
+  --elevated: #e2e5d8;
+  --subtle: #e6e3db;
+  --field-line: #828675;
+  --accent-ink: #765036;
+  --error-surface: #eee0d6;
+  --error-ink: #865035;
+  --cleaning: #ded2ba;
+  --photo-scrim: #141912de;
+  --footer-surface: #313b31;
+  --footer-ink: #eee9df;
+  --button-hover: #465141;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --linen: #171d19;
+  --surface: #242d26;
+  --elevated: #303a32;
+  --subtle: #242d26;
+  --forest: #b5c2ae;
+  --stone: #a89b83;
+  --ink: #f3eee4;
+  --muted: #b5c2ae;
+  --clay: #c99270;
+  --line: #4f5b51;
+  --field-line: #829282;
+  --accent-ink: #e3b191;
+  --error-surface: #392c26;
+  --error-ink: #efb696;
+  --cleaning: #413a30;
+  --footer-surface: #242d26;
+  --footer-ink: #f3eee4;
+  --button-hover: #d1dccb;
+}
+
+body { font-size: 16px; line-height: 1.65; }
+em { color: var(--muted); }
+button, select, input, textarea { color: inherit; }
+button:focus-visible, a:focus-visible, summary:focus-visible, .table-scroll:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 3px; }
+.header-controls { display: flex; align-items: center; gap: clamp(10px, 1.5vw, 24px); }
+.site-header nav, .admin-nav, .button, .text-link, .menu-toggle, .theme-toggle { font-size: 15px; }
+.button { gap: clamp(12px, 3vw, 44px); }
+.button:not(.clay-button):hover { background: var(--button-hover); }
+.theme-toggle {
+  flex: none; min-width: 44px; min-height: 44px; padding: 5px 9px;
+  border: 1px solid var(--field-line); border-radius: 4px; background: var(--surface);
+  color: var(--ink); cursor: pointer;
+}
+.theme-toggle[hidden], .copy-reference[hidden] { display: none; }
+.theme-toggle:hover, .theme-toggle[aria-pressed="true"] { background: var(--elevated); }
+.theme-toggle .theme-moon, .theme-toggle .theme-sun { font-size: 20px; line-height: 1; }
+.theme-toggle .theme-sun, [data-theme="dark"] .theme-toggle .theme-moon { display: none; }
+[data-theme="dark"] .theme-toggle .theme-sun { display: inline; }
+.theme-switch { margin-inline-start: auto; }
+.site-footer, .experience { background: var(--footer-surface); color: var(--footer-ink); }
+.site-footer .brand, .site-footer a, .site-footer .text-link { color: var(--footer-ink); }
+.site-footer nav, .site-footer p, .footer-links, .footer-bottom, .image-disclosure { font-size: 14px; }
+
+.field label, .health-question legend, .health-question label, .check-label, .payment-options label { font-size: 15px; }
+.field input, .field select, .field textarea, .password-field { border-color: var(--field-line); background: var(--surface); color: var(--ink); font-size: 16px; }
+.password-field input { border: 0; }
+.password-field button { font-size: 14px; }
+select option { background: var(--surface); color: var(--ink); }
+input[type="radio"], input[type="checkbox"] { accent-color: var(--forest); }
+.booking-heading > p:last-child, .health-aside > p:not(.eyebrow), .staff-roster > p:not(.eyebrow) { font-size: 16px; }
+.hero-description, .intro-section p, .experience-copy > p:not(.eyebrow), .history-preview > div,
+.service-copy > p:not(.eyebrow), .visit-note p:not(.eyebrow), .story-section p:not(.eyebrow),
+.terms-content p:not(.eyebrow), .auth-panel > p:not(.eyebrow), .dashboard-head p:not(.eyebrow) { font-size: 16px; }
+.price small, .experience-lines p, .experience-lines span, .service-specs, .price-estimator p,
+.gallery-filters button, .gallery-filters span, .gallery-grid figcaption, .auth-story > p:last-child,
+.account-card dt, .account-card dd, .empty-state p, .appointment p { font-size: 14px; }
+.booking-steps { flex-wrap: wrap; }
+.booking-steps li, .booking-steps li > span, .form-introduction, .slot-status,
+.field small, .field label span, .summary-details dt, .summary-details dd, .summary-total > span,
+.summary-footnote p, .details-grid dt, .details-grid dd small, .saved-health p,
+.health-answer-grid > div, .appointment-actions a, .appointment-actions button, .admin-metrics p,
+.payment-summary-line, .change-history li, .form-note, .status-badge, .proposal-review p { font-size: 14px; }
+.eyebrow { font-size: 13px; }
+.small-note { font-size: 14px !important; }
+.notice, .declaration-complete, .time-slot > span, .service-option-content > span > span { font-size: 15px; }
+.service-option-content small, .time-slot small { font-size: 13px; }
+.summary-details > div { grid-template-columns: minmax(90px, 1fr) minmax(0, 1fr); border-color: var(--line); }
+.summary-total { flex-wrap: wrap; gap: 8px 16px; }
+.summary-total > strong, .admin-metrics strong { font-size: 28px; }
+.summary-panel h2, .booking-sheet h2, .admin-content h2 { font-size: clamp(28px, 3.5vw, 38px); }
+.notice, .declaration-complete, .summary-panel, .proposal-review, .admin-metrics article,
+.service-option > input:checked + .service-option-content, .state-confirmed, .state-completed,
+.appointment-actions a:hover { background: var(--elevated); }
+.notice.error, .state-cancelled, .state-expired, .calendar-blocked, .calendar-inactive { background: var(--error-surface); border-color: var(--error-ink); color: var(--error-ink); }
+.state-awaiting_payment, .state-pending, .payment-badge, .calendar-pending { color: var(--accent-ink); }
+.time-slot > span { border-color: var(--field-line); }
+.time-slot.unavailable, .calendar-closed { color: var(--muted); }
+.time-slot.unavailable > span, .calendar-closed { background: var(--subtle); }
+.calendar-cleaning { background: var(--cleaning); }
+.summary-footnote { border-color: var(--line); }
+.clay-button { color: #fff8ef; }
+dialog { background: var(--surface); color: var(--ink); }
+dialog::backdrop { background: var(--photo-scrim); }
+
+.therapist-options { margin-block: 28px; }
+.therapist-options legend { margin-bottom: 12px; }
+.therapist-options label {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px; min-height: 48px;
+  border: 1px solid var(--line); margin-bottom: 7px; cursor: pointer; overflow-wrap: anywhere;
+}
+.therapist-options label:has(:checked) { background: var(--elevated); border-color: var(--field-line); }
+.therapist-options label small { display: block; font-size: 14px; color: var(--muted); }
+.staff-services { margin-top: 15px; }
+.staff-services .check-label { margin-block: 10px; }
+.staff-roster summary { cursor: pointer; }
+
+.table-scroll { max-width: 100%; }
+.table-scroll table, .table-scroll th, .admin-content table, .admin-content td small, .payment-ledger small { font-size: 14px; }
+.table-scroll th, .table-scroll td { white-space: normal; overflow-wrap: anywhere; }
+.table-scroll td { min-width: 90px; }
+.table-scroll td form { min-width: 210px; }
+.payment-ledger table { min-width: 980px; }
+.admin-content .payment-ledger table { min-width: 1210px; }
+.payment-ledger td:first-child { min-width: 185px; }
+.payment-ledger .transaction-reference { min-width: 178px; }
+.booking-reference, .transaction-reference { font-size: max(14px, 1em); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; letter-spacing: .02em; }
+.reference-panel { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin-block: 10px 16px; }
+.copy-status { color: var(--muted); font-size: 14px; }
+.calendar-scroll { border: 1px solid var(--line); }
+.room-calendar { min-width: 1010px; table-layout: fixed; margin: 0; }
+.room-calendar th:first-child { position: sticky; inset-inline-start: 0; z-index: 1; width: 86px; background: var(--surface); }
+.room-calendar td, .room-calendar th { padding: 10px; border-inline-end: 1px solid var(--line); font-size: 14px; }
+.calendar-booking { display: grid; gap: 3px; line-height: 1.42; }
+.calendar-booking:hover, .day-agenda a:hover { text-decoration: underline; }
+.calendar-pending { background: var(--elevated); }
+.day-agenda { margin-bottom: 20px; }
+.day-agenda summary { cursor: pointer; font-weight: 600; }
+.day-agenda ul { margin: 10px 0 0; padding: 0; list-style: none; }
+.day-agenda li { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 18px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.checkout-heading { padding-block: clamp(36px, 5vw, 64px) 24px; }
+.checkout-heading h1 { font-size: clamp(43px, 6vw, 76px); margin: 12px 0 14px; }
+.checkout-layout { grid-template-areas: "payment summary"; }
+.checkout-summary { grid-area: summary; }
+.checkout-summary h2 { margin-block: 8px 16px; }
+.checkout-payment { grid-area: payment; }
+.checkout-disclosure { padding: 11px 14px; border: 1px solid var(--field-line); background: var(--surface); font-size: 14px; }
+.checkout-hold { margin-block: 12px 20px; }
+.checkout-balance { margin-top: 8px; }
+.checkout-payment .payment-options { margin-block: 18px 22px; }
+.checkout-payment .checkout-option { padding: 12px 14px; border: 1px solid var(--field-line); margin-top: 8px; min-height: 48px; }
+.checkout-payment .checkout-option strong { margin-inline-start: auto; }
+.checkout-payment .checkout-option:has(:checked) { background: var(--elevated); }
+.checkout-method { border-top: 1px solid var(--line); padding-top: 20px; }
+.security-action, .security-invitation { max-width: 680px; }
+.security-invitation { overflow-wrap: anywhere; }
+.security-invitation input { min-width: 0; }
+.security-table table { min-width: 720px; }
+.security-table td .text-link { display: block; width: fit-content; }
+.account-security section { margin-block: 30px; }
+.account-security h3 { margin-block: 22px 12px; }
+[data-admin-setup][hidden] { display: none; }
+@media (max-width: 850px) {
+  .checkout-layout { grid-template-areas: "summary" "payment"; }
+  .checkout-summary .summary-details { display: block; }
+}
+
+@media (max-width: 1000px) {
+  .site-header { position: relative; }
+  .site-header .menu-toggle { display: flex; align-items: center; gap: 5px; background: none; border: 0; padding: 8px 0; }
+  .site-header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 10; padding: 18px 22px; background: var(--linen); border-bottom: 1px solid var(--line); align-items: stretch; }
+  .site-header nav.is-open { display: flex; flex-direction: column; }
+  .admin-nav { position: static; padding-inline: 0; gap: 8px 18px; align-items: center; }
+}
+@media (max-width: 420px) {
+  .site-header { padding-inline: 14px; }
+  .site-header .brand { gap: 7px; }
+  .site-header .brand > span { font-size: 18px; }
+  .site-header .brand img { width: 32px; height: 39px; }
+  .site-header .menu-toggle span { display: none; }
+  .booking-steps li { flex-basis: 100%; }
+  .declaration-complete { flex-wrap: wrap; }
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}

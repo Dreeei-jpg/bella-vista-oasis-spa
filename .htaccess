@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(app|config|database|docs|tests|tools|var)(/|$) - [F,L,NC]
+<FilesMatch "(?i)(^(README\.md|\.gitignore)$|\.(zip|sql|ps1|log|ini)$)">
+Require all denied
+</FilesMatch>

@@ -1,0 +1,65 @@
+/* Phase 3 customer management keeps the Quiet Atlas forms and spacing. */
+.inline-actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px 24px; margin:24px 0; }
+.appointment-actions a { display:flex; justify-content:space-between; padding:12px 14px; border:1px solid var(--stone); font-size:11px; }
+.appointment-actions a:hover { border-color:var(--forest); background:#d9ddce; }
+.clay-button { background:#875a40; border-color:#875a40; }
+.clay-button:hover { background:#744a32; }
+.replacement-form { margin-top:35px; }
+.replacement-form .button { margin-top:25px; }
+.proposal-review { margin-top:36px; padding:25px; border:1px solid var(--forest); background:#e3e5d8; }
+.proposal-review h3 { margin:18px 0; font-size:32px; }
+.proposal-review p { font-size:12px; }
+.proposal-review .button { margin-top:24px; }
+.payment-options { padding:25px 0; margin:28px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.payment-options fieldset { border:0; margin:0 0 18px; padding:0; }
+.payment-options label { display:flex; align-items:center; gap:10px; margin-top:22px; font-size:13px; }
+.payment-options input { flex:0 0 auto; }
+.payment-options .small-note { margin-left:23px; }
+.result-sheet { max-width:1000px; }
+.payment-ledger table { min-width:650px; }
+.payment-ledger small { display:block; color:var(--muted); font-size:10px; margin-top:7px; }
+.payment-ledger td { white-space:normal; overflow-wrap:anywhere; }
+.payment-summary-line { display:flex; flex-wrap:wrap; gap:10px 25px; font-size:12px; margin:17px 0; }
+.payment-summary-line span { color:var(--muted); }
+.state-cancelled,.state-expired { border-color:#a5785b; color:#86583d; background:#e9e0d4; }
+.state-awaiting_payment,.state-pending { border-color:var(--stone); color:#6f634c; }
+.state-confirmed { color:var(--forest); background:#e0e5d9; }
+.state-completed { color:var(--muted); border-color:var(--line); }
+.change-history { border-top:1px solid var(--line); margin-top:35px; padding-top:25px; }
+.change-history h3 { margin:14px 0 20px; }
+.change-history li { padding:12px 0; font-size:12px; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.change-history ul { list-style:none; padding:0; }
+.record-payment-section { margin-top:45px; }
+.record-payment-section h2 { font-size:36px; }
+.admin-nav { display:flex; flex-wrap:wrap; gap:12px 24px; padding-block:24px; border-bottom:1px solid var(--line); font-size:12px; }
+.admin-nav [aria-current] { text-decoration:underline; text-underline-offset:6px; }
+.booking-heading .admin-title { font-size:clamp(40px,5.5vw,84px); overflow-wrap:anywhere; }
+.admin-content { min-width:0; padding-bottom:50px; }
+.admin-content h2 { font-size:clamp(30px,3.5vw,48px); margin-block:35px 24px; }
+.admin-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr)); gap:18px; margin-block:28px 45px; }
+.admin-metrics article { border-top:1px solid var(--forest); background:#e3e4d8; padding:22px; min-width:0; }
+.admin-metrics p { font-size:12px; color:var(--muted); min-height:38px; }
+.admin-metrics strong { font:clamp(30px,3vw,44px)/1.2 var(--serif); overflow-wrap:anywhere; }
+.admin-filters { display:flex; flex-wrap:wrap; gap:18px; align-items:end; margin-bottom:28px; }
+.admin-filters .field { flex:1 1 200px; margin:0; }
+.admin-content table { width:100%; font-size:12px; }
+.admin-content th,.admin-content td { vertical-align:top; padding:14px; border-bottom:1px solid var(--line); text-align:left; }
+.admin-content td small { display:block; font-size:10px; color:var(--muted); margin-top:7px; }
+.admin-table { min-width:1450px; }
+.admin-settings { max-width:700px; }
+.room-calendar { min-width:1650px; table-layout:fixed; margin-bottom:40px; }
+.room-calendar td { font-size:10px; overflow-wrap:anywhere; }
+.room-calendar small { font-size:8px!important; }
+.calendar-occupied,.calendar-checkout-hold { background:var(--forest); color:var(--linen); }
+.calendar-occupied small,.calendar-checkout-hold small { color:var(--linen)!important; }
+.calendar-cleaning { background:#d7cab3; color:var(--ink); }
+.calendar-blocked,.calendar-inactive { background:#d8bca6; }
+.calendar-closed { background:#dedbd3; color:var(--muted); }
+.admin-content .table-scroll { max-width:100%; overflow-x:auto; }
+@media(max-width:760px) {
+ .inline-actions { align-items:stretch; gap:12px; }
+ .inline-actions .button { width:100%; }
+ .payment-options label { font-size:12px; }
+ .proposal-review { padding:20px; }
+ .payment-summary-line { font-size:11px; gap:7px 15px; }
+}

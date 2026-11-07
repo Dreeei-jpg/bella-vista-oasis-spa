@@ -1,0 +1,27 @@
+[
+  {
+    "name": "hero",
+    "source": "https://images.unsplash.com/photo-1737352777897-e22953991a32?auto=format&fit=crop&w=1600&q=85",
+    "bytes": 407666
+  },
+  {
+    "name": "single",
+    "source": "https://images.unsplash.com/photo-1611920630418-f587fdc3bf94?auto=format&fit=crop&w=1600&q=85",
+    "bytes": 702540
+  },
+  {
+    "name": "couples",
+    "source": "https://images.unsplash.com/photo-1611920629515-3f76f8c36b37?auto=format&fit=crop&w=1600&q=85",
+    "bytes": 668929
+  },
+  {
+    "name": "lounge",
+    "source": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
+    "bytes": 366787
+  },
+  {
+    "name": "detail",
+    "source": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=85",
+    "bytes": 170349
+  }
+]

@@ -1,0 +1,56 @@
+
+# Local configuration files
+/config/local.php
+/config/payments.local.php
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime files
+/var/*
+!/var/.gitkeep
+
+# Logs
+*.log
+
+# Project backup archives
+*.zip
+
+# Database backups and exports containing data
+*.sql.gz
+*.dump
+*.bak
+
+# Dependencies
+/vendor/
+node_modules/
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Private exports and history backups
+*.sql
+!/database/schema.sql
+!/database/migrations/002_booking_engine.sql
+!/database/migrations/003_customer_management.sql
+!/database/migrations/005_demo_admin.sql
+!/database/migrations/006_therapist_preferences.sql
+!/database/migrations/007_admin_account_security.sql
+!/database/seeds/required_rooms.sql
+*.7z
+*.rar
+*.tar
+*.gz
+*.bundle
+*.pem
+*.key
+/backups/
+/private-backups/
+/docs/screenshots/
+/e 5.3 admin account security management*
+/ta Oasis Spa system*
