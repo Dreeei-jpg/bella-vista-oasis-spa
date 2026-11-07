@@ -1,4 +1,4 @@
-# Bella Vista Oasis Spa — Phase 5.3
+# Bella Vista Oasis Spa
 Working PHP/MySQL college-project prototype with Quiet Atlas branding, customer registration/login, health declarations, real availability, simulated checkout, appointment history, cancellation/rescheduling, and integrated administration.
 
 Test checkout — No actual funds will be transferred. GCash, Maya and Card are available as test payment options. Checkout collects no payment credentials. Payment History identifies test transactions separately from verified provider records.
